@@ -26,7 +26,7 @@ public class ArrayListCode {
         ll.add("atanu12");
 
         ll.addAll(l);
-        // System.out.println(ll);
+        System.out.println(ll);
 
         // for (String n : ll) {
         // System.out.println(n);
@@ -137,16 +137,85 @@ public class ArrayListCode {
 
         // Write a Java program to trim the capacity of an array list the current list
 
-        ArrayList<String> c1 = new ArrayList<String>();
-        c1.add("Red");
-        c1.add("Green");
-        c1.add("Black");
-        c1.add("White");
-        c1.add("Pink");
-        System.out.println("Original array list: " + c1);
-        System.out.println("Let trim to size the above array: ");
-        c1.trimToSize();
-        System.out.println(c1);
+        // ArrayList<String> c1 = new ArrayList<String>();
+        // c1.add("Red");
+        // c1.add("Green");
+        // c1.add("Black");
+        // c1.add("White");
+        // c1.add("Pink");
+        // System.out.println("Original array list: " + c1);
+        // System.out.println("Let trim to size the above array: ");
+        // c1.trimToSize();
+        // System.out.println(c1);
+
+        // Write a program to convert List to Array.
+        // ArrayList<String> c1 = new ArrayList<String>();
+        // c1.add("Red");
+        // c1.add("Green");
+        // c1.add("Black");
+        // c1.add("White");
+        // c1.add("Pink");
+        // // System.out.println(c1);
+        // String[] col = c1.toArray(new String[c1.size()]);
+        // for (String n : col) {
+        // System.out.println(n);
+        // }
+
+        // Write a program to convert Array to List?
+        // String[] col = { "bb", "cc", "aa" };
+        // ArrayList<String> c2 = new ArrayList<String>(Arrays.asList(col));
+        // System.out.println(c2);
+
+        // Write a program to sort ArrayList using Comparable and Comparator?
+        // ArrayList<String> c1 = new ArrayList<String>();
+        // c1.add("Red");
+        // c1.add("Green");
+        // c1.add("Black");
+        // c1.add("White");
+        // c1.add("Pink");
+        // Collections.sort(c1); // comparable
+        // System.out.println(c1);
+
+        // Collections.sort(c1, new MyCom()); // comparator
+        // System.out.println(c1);
+
+        // Write a program to convert LinkedList to ArrayList?
+        // LinkedList<String> linkedlist = new LinkedList<String>();
+        // linkedlist.add("Mango");
+        // linkedlist.add("Banana");
+        // linkedlist.add("Pear");
+        // linkedlist.add("Apple");
+        // linkedlist.add("Orange");
+        // // Converting LinkedList to ArrayList
+        // List<String> list = new ArrayList<String>(linkedlist);
+
+        // for (String str : list) {
+        // System.out.println(str);
+        // }
+
+        // How to synchronize an ArrayList in java?
+        // ArrayList<String> c1 = new ArrayList<String>();
+        // c1.add("Red");
+        // c1.add("Green");
+        // c1.add("Black");
+        // c1.add("White");
+        // c1.add("Pink");
+
+        // // System.out.println(c1);
+        // List<String> li = Collections.synchronizedList(c1);
+
+        // System.out.println(li);
+
     }
 
+}
+
+class MyCom implements Comparator {
+    public int compare(Object o1, Object o2) {
+        // String s1 = o1.toString();
+        // String s2 = o2.toString();
+        // return -s1.compareTo(s2);
+        return -o1.toString().compareTo(o2.toString());
+
+    }
 }
