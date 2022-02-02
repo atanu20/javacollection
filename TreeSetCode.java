@@ -2,35 +2,33 @@ package mypack;
 
 import java.util.*;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class TreeSetCode {
     public static void main(String[] args) {
-        // Set<Integer> t = new TreeSet<>();// ascending sort /default sort / comparable
+        Set<Integer> t = new TreeSet<>(new MyCo());// ascending sort /default sort / comparable
         // TreeSet<Integer> t = new TreeSet<>();
-        // t.add(10);
-        // t.add(20);
-        // t.add(120);
-        // t.add(200);
-        // t.add(150);
-        // t.add(230);
-        // System.out.println(t);
-        Set<String> st = new TreeSet<>(new MyComp());
-        st.add("raj");
-        st.add("atanu");
-        st.add("dad");
+        t.add(10);
+        t.add(20);
+        t.add(120);
+        t.add(200);
+        t.add(150);
+        t.add(230);
+        System.out.println(t);
+        // Set<String> st = new TreeSet<>(new MyComp());
+        // st.add("raj");
+        // st.add("atanu");
+        // st.add("dad");
         // System.out.println(st);
 
         // Write a Java program to create a reverse order view of the elements contained
         // in a given tree set.
 
-        TreeSet<String> t_set = new TreeSet<String>();
+        // TreeSet<String> t_set = new TreeSet<String>();
 
-        t_set.add("Red");
-        t_set.add("Green");
-        t_set.add("Black");
-        t_set.add("Pink");
-        t_set.add("orange");
+        // t_set.add("Red");
+        // t_set.add("Green");
+        // t_set.add("Black");
+        // t_set.add("Pink");
+        // t_set.add("orange");
 
         // System.out.println(t_set.descendingSet());
 
@@ -40,8 +38,8 @@ public class TreeSetCode {
         // System.out.println(t_set.last());
 
         // Write a Java program to clone a tree set list to another tree set
-        TreeSet<String> tset = new TreeSet<String>();
-        tset = (TreeSet) t_set.clone();
+        // TreeSet<String> tset = new TreeSet<String>();
+        // tset = (TreeSet) t_set.clone();
         // System.out.println(tset);
 
         // Write a Java program to get the number of elements in a tree set
@@ -52,13 +50,13 @@ public class TreeSetCode {
         // System.out.println(t_set.equals(tset));
 
         // Write a Java program to find the numbers less than 7 in a tree set
-        TreeSet<Integer> t = new TreeSet<>();
-        t.add(1);
-        t.add(2);
-        t.add(12);
-        t.add(7);
-        t.add(5);
-        t.add(23);
+        // TreeSet<Integer> t = new TreeSet<>();
+        // t.add(1);
+        // t.add(2);
+        // t.add(12);
+        // t.add(7);
+        // t.add(5);
+        // t.add(23);
         // System.out.println(t);
         // for (int i : t) {
         // if (i < 7) {
@@ -99,19 +97,20 @@ public class TreeSetCode {
 
 }
 
-// class MyCom implements Comparator {
-// public int compare(Object o1, Object o2) {
-// Integer i1 = (Integer) o1;
-// Integer i2 = (Integer) o2;
+class MyCo implements Comparator {
+    public int compare(Object o1, Object o2) {
+        Integer i1 = (Integer) o1;
+        Integer i2 = (Integer) o2;
 
-// if (i1 < i2)
-// return 1;
-// else if (i1 > i2)
-// return -1;
-// else
-// return 0;
-// }
-// }
+        // if (i1 < i2)
+        // return 1;
+        // else if (i1 > i2)
+        // return -1;
+        // else
+        // return 0;
+        return i1.compareTo(i2);
+    }
+}
 
 class MyComp implements Comparator {
     public int compare(Object o1, Object o2) {
